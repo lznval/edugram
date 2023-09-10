@@ -1,25 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import DialogWidget from "./components/dialog";
+import FormWidget from "./components/form";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div className="App">
+        <FormWidget
+            backgroundColor="#f0f0f0"
+            buttonColor="blue"
+            textColor="blue"
+        />
+        <DialogWidget
+            backgroundColor="#ffcccc"
+            bannerImageSrc="https://via.placeholder.com/300x200"
+            promoCode="COUPON123"
+            partnerWebsiteUrl="https://partner-website.com"
+            delay={5000}
+        />
+      </div>
   );
 }
 

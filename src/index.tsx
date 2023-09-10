@@ -1,19 +1,34 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import DialogWidget from "./components/dialog";
+import FormWidget from "./components/form";
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+const dialog = ReactDOM.createRoot(
+    document.getElementById('dialog') as HTMLElement
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+const form = ReactDOM.createRoot(
+    document.getElementById('form') as HTMLElement
+);
+
+dialog.render(
+    <React.StrictMode>
+        <DialogWidget
+            backgroundColor="#ffcccc"
+            bannerImageSrc="https://via.placeholder.com/300x200"
+            promoCode="COUPON123"
+            partnerWebsiteUrl="https://partner-website.com"
+            delay={1000}
+        />
+    </React.StrictMode>
+);
+
+form.render(
+    <React.StrictMode>
+        <FormWidget
+            backgroundColor="#f0f0f0"
+            buttonColor="blue"
+            textColor="blue"
+        />
+    </React.StrictMode>
+);
