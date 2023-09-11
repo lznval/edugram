@@ -22,7 +22,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "build-webpack": "webpack"
+    "build:all": "webpack --config webpack.config.js",
+    "build:dialog": "webpack --config webpack.config.dialog.js",
+    "build:form": "webpack --config webpack.config.form.js"
   },
   "eslintConfig": {
     "extends": [

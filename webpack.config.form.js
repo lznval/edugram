@@ -3,11 +3,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     mode: 'development',
-    entry: './src/index.tsx',
+    entry: './src/components/form/index.tsx',
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: '[name].[contenthash].js',
-        library: '[name]',
+        filename: 'form.[contenthash].js',
+        library: 'form',
     },
     module: {
         rules: [

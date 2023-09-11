@@ -3,11 +3,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     mode: 'development',
-    entry: './src/index.tsx',
+    entry: './src/components/dialog/index.tsx',
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: '[name].[contenthash].js',
-        library: '[name]',
+        filename: 'dialog.[contenthash].js',
+        library: 'dialog',
     },
     module: {
         rules: [
